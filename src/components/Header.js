@@ -10,9 +10,13 @@ const Header = () => {
   const {isSignedIn} = useContext(AccountContext)
   return (
   <div className="nav">
-  {isSignedIn && (<div className="right">
+  {isSignedIn === false && (<div className="right">
     <a className="item">Login</a>
     <a className="item">Signup</a>
+  </div>
+  )}
+  {isSignedIn === true && (<div className="right">
+    <a className="item">Logout</a>
   </div>
   )}
   

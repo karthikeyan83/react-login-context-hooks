@@ -5,7 +5,7 @@ import React, {
 const AccountContext = createContext(null);
 
 export const AccountProvider = ({ account, children }) => {
-  const [isSignedIn, setSignedIn] = useState(false);
+  const [isSignedIn, setSignedIn] = useState();
   return (
     <AccountContext.Provider
       value={
